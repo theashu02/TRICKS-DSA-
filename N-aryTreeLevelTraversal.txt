@@ -1,0 +1,28 @@
+class Solution {
+public:
+    vector<vector<int>> levelOrder(Node* root) {
+        vector<vector<int>> ans;
+        if(root==NULL)return ans;
+        queue<Node*> q;
+        q.push(root);
+
+        while(!q.empty()){
+            int n = q.size();
+            vector<int> v;
+            while(n--){
+               Node* temp = q.front();
+               q.pop();
+               v.push_back(temp->val);
+
+
+               //main part is this because in n-ary tree there is no left or right 
+               // so you can call children 
+
+               for(auto it:temp->children)
+               q.push(it);   
+            }
+            ans.push_back(v);
+        }
+        return ans;
+    }
+};
