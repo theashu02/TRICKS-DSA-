@@ -1,0 +1,33 @@
+class Solution {
+public:
+   bool isSymmetric(TreeNode* root) {
+
+    // base condition for Tree
+
+    if(root==NULL) return true;
+    
+    // for push node two time to check and compare
+
+    queue<TreeNode*> q;
+    q.push(root);
+    q.push(root);
+
+    while(!q.empty()){
+        auto temp = q.front();
+        q.pop();
+        auto temp1 = q.front();
+        q.pop();
+
+        //condition for check 
+
+        if(temp==NULL && temp1==NULL) continue;
+        if(temp==NULL || temp1==NULL || temp->val != temp1->val) return false;
+
+        //push in zig zag way to compare for condition 
+        // main step
+        
+        q.push(temp->left), q.push(temp1->right), q.push(temp->right), q.push(temp1->left);
+    }
+    return true;
+}
+};
