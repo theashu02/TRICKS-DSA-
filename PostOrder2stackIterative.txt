@@ -1,0 +1,31 @@
+class Solution {
+public:
+    vector<int> postorderTraversal(TreeNode* root) {
+        vector<int> ans;
+        if(root==NULL) return ans;
+        // taking two stack
+        stack<TreeNode*> s1;
+        stack<TreeNode*> s2;
+        s1.push(root);
+        
+        // first equal root to s1 top  
+        // then push root to stack 2 
+
+        while(!s1.empty()){
+            root = s1.top();
+            s1.pop();
+            s2.push(root);
+            if(root->left) s1.push(root->left);
+            if(root->right) s1.push(root->right);
+        }
+
+        //push the value into vector
+
+        while(!s2.empty()){
+            auto temp = s2.top();
+            ans.push_back(temp->val);
+            s2.pop();
+        }
+        return ans;
+    }
+};
