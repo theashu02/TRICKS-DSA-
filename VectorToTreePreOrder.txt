@@ -1,0 +1,28 @@
+class Solution {
+public:
+    TreeNode* solve(TreeNode* &root, int ele){
+        if(root==NULL){
+            root = new TreeNode(ele);
+            return root;
+        }
+        if(root->val > ele){
+            root->left = solve(root->left, ele);
+        }
+        else{
+            root->right = solve(root->right, ele);
+        }
+        return root;
+    }
+    TreeNode* bstFromPreorder(vector<int>& preorder) {
+
+        if(preorder.size()==0)return NULL;
+        TreeNode* temp = new TreeNode(preorder[0]);
+        if(preorder.size()==1) return temp;
+        
+        TreeNode* root = NULL;
+        for(auto i:preorder){
+            solve(root,i);
+        }
+        return root;
+    }
+};
