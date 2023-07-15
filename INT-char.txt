@@ -1,0 +1,53 @@
+## convert int into char
+
+   string t = to_string(i);
+   char const *n1 = t.c_str();
+   s.push_back(*n1);
+
+   (int) -> (char)
+
+## convert char into int
+
+   stringstream t; 
+   int it = 907856;
+   int n = 0;
+   t<<it;  
+   t>>n;
+   return n;
+   output n = 907856 ->(int form)
+
+
+
+LEETCODE --> 129
+
+class Solution {
+public:
+    void dfs(TreeNode* root, vector<string> &v,string s){
+        if(root==NULL)return;
+
+        string t = to_string(root->val);
+        char const *n1 = t.c_str();
+        s.push_back(*n1);
+        if(root->right==NULL && root->left==NULL){
+           v.push_back(s);
+           return;
+        }
+        dfs(root->right,v,s);
+        dfs(root->left,v,s);
+    }
+    int sumNumbers(TreeNode* root) {
+        vector<string> v;
+        string s = "";
+        int sum =0;
+        dfs(root,v,s);   
+        for(auto it:v){
+           stringstream t;
+           int n = 0;
+           t<<it; 
+           t>>n; 
+           sum+=n;
+        }  
+        return sum;
+
+    }
+};
