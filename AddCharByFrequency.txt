@@ -1,0 +1,14 @@
+class Solution {
+public:
+    string frequencySort(string s) {
+        unordered_map<char, int> m;
+        for (auto i : s) {m[i]++;}
+        vector<pair<int, char>> p;
+        for (auto it : m) {p.push_back({it.second,it.first});}
+        sort(p.rbegin(), p.rend());  s.clear();
+        for (auto itr : p) {                    // it.first contain frequency and it.second contain char
+           s += string(itr.first, itr.second);  // add string in basis of frequency 
+        }
+        return s;
+    }
+};
