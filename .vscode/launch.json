@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/ashut/Desktop/dsa/TRICKS-DSA-",
-      "program": "c:/Users/ashut/Desktop/dsa/TRICKS-DSA-/build/Debug/outDebug",
+      "cwd": "c:/Users/ashut/Desktop/dssa/TRICKS-DSA-",
+      "program": "c:/Users/ashut/Desktop/dssa/TRICKS-DSA-/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
