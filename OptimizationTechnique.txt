@@ -1,0 +1,21 @@
+#pragma GCC optimize("O3", "unroll-loops")
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    // your code
+    return 0;
+}
+
+The #pragma GCC optimize directive is used to provide hints to the GCC (GNU Compiler Collection) about how to optimize the code. In this specific case, the directive is suggesting two optimizations: "O3" and "unroll-loops."
+
+"O3" Optimization:
+
+The "O3" optimization level is one of the optimization levels provided by GCC. It stands for level 3 optimization, which includes a high level of optimization.
+This level enables a broad range of optimizations, including inlining functions, loop unrolling, and instruction scheduling.
+It is important to note that higher optimization levels may result in longer compilation times and may not always provide significant performance gains.
+"unroll-loops" Optimization:
+
+Loop unrolling is a technique where the compiler generates multiple copies of the loop body in order to reduce loop overhead and potentially increase instruction-level parallelism.
+Unrolling loops can lead to better performance in some cases, especially when the loop body is small and the number of iterations is known at compile time.
+However, it's worth noting that loop unrolling can also increase code size, and its effectiveness depends on the specific characteristics of the code and the target architecture.
