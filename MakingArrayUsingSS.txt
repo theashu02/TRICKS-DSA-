@@ -1,0 +1,19 @@
+
+    string input = "1 2 3 4 5";
+    
+    // Create a stringstream from the input string
+    stringstream ss(input);
+
+    // Create a vector to store the elements of the array
+    vector<int> array;
+
+    // Read elements from the stringstream and store them in the vector tokenize the string and then converted into int to push in the array
+    int num;
+    while (ss >> num) {
+        array.push_back(num);
+    }
+
+    // Print the elements of the array
+    for (int element : array) {
+        cout << element << " ";
+    }
