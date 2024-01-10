@@ -16,6 +16,8 @@
    return n;
    output n = 907856 ->(int form)
 
+// Use 'static_cast' to convert the size to int 
+/*  static_cast<int>(x.size()); */
 
 
 LEETCODE --> 129
