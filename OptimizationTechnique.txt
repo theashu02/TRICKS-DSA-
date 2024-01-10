@@ -1,13 +1,16 @@
 #pragma GCC optimize("O3", "unroll-loops")
 #include<bits/stdc++.h>
-using namespace std;
 
-int main(){
-    // your code
-    return 0;
-}
 
-The #pragma GCC optimize directive is used to provide hints to the GCC (GNU Compiler Collection) about how to optimize the code. In this specific case, the directive is suggesting two optimizations: "O3" and "unroll-loops."
+auto init = []()
+{ 
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    return 'c';
+}();
+
+#pragma GCC optimize directive is used to provide hints to the GCC (GNU Compiler Collection) about how to optimize the code. In this specific case, the directive is suggesting two optimizations: "O3" and "unroll-loops."
 
 "O3" Optimization:
 
