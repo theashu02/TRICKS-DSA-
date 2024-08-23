@@ -1,0 +1,11 @@
+// how to convert char of number to int 
+char ch = '1';
+int num = ch - '0'; // Converts '1' to 1
+
+if number is long so use this
+string s = "123";
+while(i < n){
+   int val = s[i] - '0';
+   curr = (curr * 10) + val;
+   i++;
+}
